@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --border: 1px solid #252525;
+}
+
+body {
+  background: #000000;
+  font-family: "Outfit", "Anek Bangla", sans-serif;
+  color: #ffffff;
+}
+
+.header {
+  border-bottom: var(--border);
+  height: 60px;
+}
+
+.logo h3 {
+  font-size: 1.17em;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+}
+
+.classes {
+  height: calc(100vh - 60px);
+}
+
+.classes .container {
+  border-right: var(--border);
+  border-left: var(--border);
+}
+
+.class-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.class-list a {
+  padding: 10px 20px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: var(--border);
+  border-radius: 50px;
+  background: #000000;
+}
+
+.class-list a:hover {
+  background-image: url(./assets/gradient.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.classes .col-2 {
+  position: relative;
+}
+
+.classes .col-2 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.classes .col-2:hover {
+  background: url(./assets/gradient.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.classes .col-2:nth-child(-n + 4) {
+  border-bottom: var(--border);
+}
+.classes .col-2:nth-child(-n + 3) {
+  border-right: var(--border);
+}
+.classes .col-2:nth-last-child(-n + 4) {
+  border-right: var(--border);
+}
+
+.notice {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  background: rgba(255, 155, 0, 0.4);
+  border: 1px solid rgba(255, 155, 0, 0.8);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.na-notice {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: unset;
+  transform: none;
+  z-index: 99;
+  padding: 6px 10px;
+}
+
+.books .class-list {
+  cursor: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+  .col-6 {
+    position: relative;
+  }
+  .classes .col-12 {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}
