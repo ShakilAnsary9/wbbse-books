@@ -47,7 +47,8 @@ body {
 
 .class-list a {
   padding: 10px 20px;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 300;
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -62,11 +63,11 @@ body {
   background-position: center;
 }
 
-.classes .col-2 {
+.classes .class-card {
   position: relative;
 }
 
-.classes .col-2 .overlay {
+.classes .class-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -78,20 +79,20 @@ body {
   justify-content: center;
 }
 
-.classes .col-2:hover {
+.classes .class-card:hover {
   background: url(./assets/gradient.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.classes .col-2:nth-child(-n + 4) {
+.classes .class-card:nth-child(-n + 4) {
   border-bottom: var(--border);
 }
-.classes .col-2:nth-child(-n + 3) {
+.classes .class-card:nth-child(-n + 3) {
   border-right: var(--border);
 }
-.classes .col-2:nth-last-child(-n + 4) {
+.classes .class-card:nth-last-child(-n + 4) {
   border-right: var(--border);
 }
 
@@ -132,11 +133,23 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .col-6 {
+  .class-card {
     position: relative;
+    border-bottom: var(--border) !important;
+  }
+  .classes {
+    height: max-content;
   }
   .classes .col-12 {
     width: 100%;
-    aspect-ratio: 1;
+    height: max-content;
+    padding: 50px 0;
+  }
+  .books {
+    margin-bottom: 100px;
+  }
+  .na-notice {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
